@@ -1,0 +1,17 @@
+C:\Users\glory_\source\repos\nDemo3\Data\obj\Debug\netcoreapp3.1\Data.csprojAssemblyReference.cache
+C:\Users\glory_\source\repos\nDemo3\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfoInputs.cache
+C:\Users\glory_\source\repos\nDemo3\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfo.cs
+C:\Users\glory_\source\repos\nDemo3\Data\obj\Debug\netcoreapp3.1\Data.csproj.CoreCompileInputs.cache
+C:\Users\glory_\source\repos\nDemo3\Data\bin\Debug\netcoreapp3.1\Data.deps.json
+C:\Users\glory_\source\repos\nDemo3\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.json
+C:\Users\glory_\source\repos\nDemo3\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.dev.json
+C:\Users\glory_\source\repos\nDemo3\Data\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\glory_\source\repos\nDemo3\Data\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\glory_\source\repos\nDemo3\Data\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\glory_\source\repos\nDemo3\Data\bin\Debug\netcoreapp3.1\Service.dll
+C:\Users\glory_\source\repos\nDemo3\Data\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\glory_\source\repos\nDemo3\Data\bin\Debug\netcoreapp3.1\Service.pdb
+C:\Users\glory_\source\repos\nDemo3\Data\obj\Debug\netcoreapp3.1\Data.csproj.CopyComplete
+C:\Users\glory_\source\repos\nDemo3\Data\obj\Debug\netcoreapp3.1\Data.dll
+C:\Users\glory_\source\repos\nDemo3\Data\obj\Debug\netcoreapp3.1\Data.pdb
+C:\Users\glory_\source\repos\nDemo3\Data\obj\Debug\netcoreapp3.1\Data.genruntimeconfig.cache

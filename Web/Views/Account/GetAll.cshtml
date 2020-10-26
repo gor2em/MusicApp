@@ -1,0 +1,15 @@
+﻿@model IEnumerable<UserDetail>
+@{
+    ViewData["Title"] = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>GetAll</h1>
+
+@foreach (var item in Model)
+{
+    <p>@item.UserId</p>
+    <p>@item.Role.RoleName</p>
+
+}
+

@@ -1,0 +1,48 @@
+﻿@model MusicModel
+@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "AddMusic";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Müzik Ekle</h1>
+<h4>Zumuzi için bir müzik ekle!</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddMusic" asp-route-userId="@Context.Session.GetInt32("SessionUserId")">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                @*<label asp-for="MusicName" class="control-label"></label>*@
+                <input asp-for="MusicName" class="form-control" placeholder="müzik adı"  required/>
+                <span asp-validation-for="MusicName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="MusicDescription" class="control-label"></label>*@
+                <input asp-for="MusicDescription" class="form-control" placeholder="müzik açıklaması" id="input-med" required />
+                <span asp-validation-for="MusicDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*<label asp-for="MusicLink" class="control-label"></label>*@
+                <input asp-for="MusicLink" class="form-control" placeholder="müzik linki" required />
+                <span asp-validation-for="MusicLink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+                <select asp-for="CategoryId" asp-items="ViewBag.Category" class="form-control" required>
+                    <option value="">bir kategori  seçin.</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Ekle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri Dön</a>
+</div>
+

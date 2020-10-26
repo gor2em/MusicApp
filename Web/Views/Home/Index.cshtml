@@ -1,0 +1,70 @@
+﻿@model ViewModel
+
+<partial name="_userInfo" />
+
+<div class="container mt-5 mb-5 text-center">
+    <h2 class="">En Çok Beğenilen Parçalar</h2>
+    <div class="row mt-4">
+        @foreach (var music in Model.PopularMusics)
+        {
+            <div class="col-lg-3">
+                @Html.Raw("<div class=\"responsive-iframe\">" + music.MusicLink + "</div>")
+                <a asp-action="detail" asp-controller="music" asp-route-id="@music.MusicId">@music.MusicName</a>
+                <p><strong>@music.TotalLikes</strong> kişi tarafından beğenildi.</p>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container mt-5 mb-5 text-center">
+    <h2 class="">Son eklenen parçalar</h2>
+    <div class="row mt-4">
+        @foreach (var music in Model.LastMusics)
+        {
+            <div class="col-lg-3">
+                @Html.Raw("<div class=\"responsive-iframe\">" + music.MusicLink + "</div>")
+                <a asp-action="detail" asp-controller="music" asp-route-id="@music.MusicId">@music.MusicName</a>
+                <p>Ekleyen: <strong>@music.UserDetail.User.UserName</strong></p>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container mt-5 mb-5 text-center">
+    <h2 class="">Popüler Üyeler</h2>
+    <div class="row mt-4" >
+
+        @foreach (var user in Model.UserDetails)
+        {
+            <div class="col-lg-2">
+                <div class="btn btn-outline-dark p-xl-4">
+                    <strong class="text-light">@user.User.UserName</strong>
+                    <br />
+                    <span class="text-info">@user.Role.RoleName</span>
+                    <p class="text-light">Skor: <strong class="text-success">@user.TotalScore</strong></p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container mt-5 mb-5 text-center">
+    
+    <div class="row mt-4">
+        <div class="col-lg-8 text-center">
+            <h2>rastgele bir müzik önerisi</h2>
+        </div>
+        <div class="col-lg-4 text-center">
+            <h2 class="">Son Yorumlar</h2>
+            @foreach (var comment in Model.Comments)
+            {
+                <p class="text-light border-bottom">
+                    @comment.CommentContent
+                    <br />
+                    <strong class="text-dark ">@comment.CreatedOn.ToShortDateString()</strong>
+                </p>
+            }
+
+        </div>
+    </div>
+</div>

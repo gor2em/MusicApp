@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Http;
+@if (Context.Session.GetString("SessionUser") == null)
+{
+    <div class="text-center">
+        <div id="main-bg">
+            <div class="main-inside p-4">
+                <h2 class="display-4">Zumuzi' ye hoş geldin!</h2>
+                <p>Hadi başlayalım. Üye değilsen <a asp-action="signup" asp-controller="account" class="font-weight-bold">hemen kaydol</a>.</p>
+                <p>Hesabın var mı? <a asp-action="signin" asp-controller="account" class="font-weight-bold">giriş yap</a></p>
+            </div>
+        </div>
+    </div>
+}
+else
+{ 
+    <div class="text-center">
+        <div id="main-bg">
+            <div class="main-inside p-4">
+                <h2 class="" style="line-height:140px">Zumuzi' ye tekrar hoş geldin! <strong class="text-info">@User.Identity.Name</strong></h2>
+            </div>
+        </div>
+    </div>
+}
+

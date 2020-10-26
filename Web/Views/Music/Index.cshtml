@@ -1,0 +1,19 @@
+﻿@model ViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="display-4">Müzikler</h1>
+<a asp-action="AddMusic" asp-controller="Music" class="btn btn-dark mb-2">Müzik Ekle</a>
+
+<div class="row">
+    @foreach (var music in Model.LastMusics)
+    {
+        <div class="col-lg-2 text-center">
+            <h1><a asp-action="Detail" asp-controller="Music" class="btn btn-dark" asp-route-id="@music.MusicId">@music.MusicName</a></h1>
+        </div>
+    }
+</div>
+
+
